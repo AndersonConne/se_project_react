@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin: 32px 40px;
+  text-align: center;
+}
+
+.header__date {
+  margin: 0 24px;
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+}
+.header__clothes-button {
+  margin-left: auto;
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-right: 20px;
+  border: none;
+}
+
+.header__profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.header__profile-name {
+  margin-right: 20px;
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.24;
+}
