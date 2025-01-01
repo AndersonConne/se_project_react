@@ -1,0 +1,125 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0000004d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.modal__title {
+  margin: 0 0 24px;
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.modal_open {
+  visibility: visible;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../assets/close.svg");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__content {
+  background-color: white;
+  position: relative;
+  padding: 28px 28px 36px;
+  max-width: 496px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__label {
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.modal__label_type_image {
+  margin-top: 24px;
+}
+
+.modal__label_type_radio {
+}
+
+.modal__legend {
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  color: black;
+}
+
+.modal__input {
+  display: block;
+  margin-top: 8px;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid;
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.24;
+  padding: 8px;
+}
+
+.modal__radio-buttons {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  accent-color: black;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__label_type_radio {
+  margin-bottom: 8px;
+}
+
+.modal__label_type_radio:last-of-type {
+  margin: 0;
+}
+
+.modal__radio-buttons:last-of-type {
+  margin-bottom: 32px;
+}
+
+.modal__submit {
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 124px;
+  height: 36px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}

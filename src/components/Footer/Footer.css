@@ -1,0 +1,13 @@
+.footer {
+  margin: 85px 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  font-family: "cabinet-grotesk";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+}

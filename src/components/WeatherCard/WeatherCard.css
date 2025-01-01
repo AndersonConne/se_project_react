@@ -1,0 +1,28 @@
+.weather {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.weather__image {
+  object-fit: cover;
+  object-position: right top;
+  height: 80px;
+  margin: 0;
+  width: 100%;
+}
+
+.weather__temp {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+  margin: 0;
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  color: white;
+}

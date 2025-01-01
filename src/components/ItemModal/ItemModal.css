@@ -1,0 +1,30 @@
+.modal__content_type_preview {
+  padding: 0;
+  overflow: hidden;
+}
+
+.modal__image_type_preview {
+  max-width: 498px;
+  max-height: 498px;
+}
+
+.modal__footer {
+  margin: 20px 0 32px 32px;
+}
+
+.modal__caption {
+  margin: 0;
+  padding-bottom: 12px;
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.modal__weather {
+  margin: 0;
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+}
