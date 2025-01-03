@@ -4,6 +4,15 @@
   padding: 32px 0 28px;
 }
 
+.header__nav {
+  display: none;
+}
+
+.header__logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .header__date {
   padding: 0 24px;
   font-family: "cabinet-grotesk";
@@ -37,4 +46,57 @@
   font-size: 20px;
   line-height: 1.24;
   margin: 0;
+}
+
+.header__hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 630px) {
+  .header {
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .header__nav {
+    visibility: hidden;
+    width: 343px;
+    height: 208px;
+  }
+
+  .header__nav_open {
+    visibility: visible;
+  }
+
+  .header__logo-container {
+    display: block;
+  }
+
+  .header__date {
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  .header__logo {
+    display: block;
+    padding-bottom: 32px;
+  }
+
+  .header__clothes-button {
+    display: none;
+  }
+
+  .header__profile-name {
+    display: none;
+  }
+
+  .header__profile-pic {
+    display: none;
+  }
+
+  .header__hamburger {
+    display: block;
+    width: 44px;
+    height: 44px;
+  }
 }

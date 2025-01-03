@@ -1,6 +1,6 @@
 .card {
-  width: 325px;
-  height: 328px;
+  width: 323px;
+  height: 326px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -13,7 +13,10 @@
 .card__name {
   position: absolute;
   top: 15px;
+  display: flex;
+  align-items: center;
   margin: 0;
+  text-align: center;
   background-color: white;
   padding: 2px 12px;
   border-radius: 4px;
@@ -26,4 +29,19 @@
 
 .card__image {
   width: 100%;
+}
+
+@media screen and (max-width: 630px) {
+  .card {
+    width: 164px;
+    height: 164px;
+  }
+
+  .card__name {
+    top: 7px;
+    left: 44px;
+  }
+
+  .card__name:last-of-type {
+  }
 }

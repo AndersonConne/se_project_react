@@ -11,6 +11,18 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  align-items: center;
   list-style-type: none;
-  gap: 15px;
+  gap: 20px;
+  width: 100%;
+}
+
+@media screen and (min-width: 375px) and (max-width: 450px) {
+  .cards__text {
+    margin: 20px 0;
+  }
+
+  .cards__list {
+    gap: 15px;
+  }
 }
