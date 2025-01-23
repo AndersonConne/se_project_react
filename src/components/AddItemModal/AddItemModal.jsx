@@ -27,7 +27,6 @@ function AddItemModal({
   const handleSubmit = (e) => {
     e.preventDefault();
     handleAddItemModalSubmit(name, imageUrl, weather);
-    // empty the inputs
     setName("");
     setImageUrl("");
     setWeather("");
@@ -78,7 +77,7 @@ function AddItemModal({
             type="radio"
             className="modal__radio-input"
             name="weather"
-            value={weather}
+            value="hot"
             onChange={handleWeatherChange}
             checked={weather === "hot"}
           />{" "}

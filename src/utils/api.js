@@ -32,6 +32,12 @@ function addItem(name, imageUrl, weather) {
       imageUrl,
       weather,
     }),
+  }).then((res) => {
+    if (res.ok) {
+      return res.json();
+    }
+
+    return Promise.reject(`Error: ${res.status}`);
   });
 }
 
