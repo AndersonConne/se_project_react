@@ -23,7 +23,7 @@
   margin: 0;
 }
 .header__clothes-button {
-  margin-left: auto;
+  /* margin-left: auto; */
   font-family: "cabinet-grotesk";
   font-weight: 700;
   font-size: 20px;
@@ -48,55 +48,7 @@
   margin: 0;
 }
 
-.header__hamburger {
-  display: none;
-}
-
-@media screen and (max-width: 630px) {
-  .header {
-    justify-content: space-between;
-    align-items: start;
-  }
-
-  .header__nav {
-    visibility: hidden;
-    width: 343px;
-    height: 208px;
-  }
-
-  .header__nav_open {
-    visibility: visible;
-  }
-
-  .header__logo-container {
-    display: block;
-  }
-
-  .header__date {
-    padding: 0;
-    margin-bottom: 16px;
-  }
-
-  .header__logo {
-    display: block;
-    padding-bottom: 32px;
-  }
-
-  .header__clothes-button {
-    display: none;
-  }
-
-  .header__profile-name {
-    display: none;
-  }
-
-  .header__profile-pic {
-    display: none;
-  }
-
-  .header__hamburger {
-    display: block;
-    width: 44px;
-    height: 44px;
-  }
+.header__link {
+  text-decoration: none;
+  color: black;
 }

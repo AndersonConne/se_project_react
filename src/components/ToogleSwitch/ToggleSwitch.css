@@ -1,0 +1,71 @@
+.toggle {
+  margin: 0 20px 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.toggle__switch {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 56px;
+  height: 28px;
+  border: #7e7e7e 2px solid;
+  background: white;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.toggle__label:hover {
+  border: #000000 2px solid;
+}
+
+.toggle__text {
+  z-index: 1;
+  color: gray;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 8px;
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.24;
+}
+
+.toggle__label .toggle__button {
+  content: "";
+  position: absolute;
+  left: 0.1px;
+  width: 28px;
+  height: 28px;
+  content: "";
+  border-radius: 45px;
+  transition: 0.2s;
+  background: #000000;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.toggle__switch:checked + .toggle__label .toggle__button {
+  left: calc(100%);
+  transform: translateX(-100%);
+}
+
+.toggle__label:active .toggle__button {
+  width: 20px;
+}
+
+.toggle__temp-f {
+  color: white;
+}
+
+.toggle__temp-c {
+  color: #7e7e7e;
+}

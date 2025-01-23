@@ -1,28 +1,33 @@
+import ToggleSwitch from "../ToogleSwitch/ToggleSwitch";
 import "./Header.css";
 import logo from "../../assets/logo.svg";
 import profileImage from "../../assets/profile-image.svg";
-import hamburgerMenu from "../../assets/hamburger-menu.svg";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const currentDate = new Date().toLocaleString("default", {
   month: "long",
   day: "numeric",
 });
 
-function Header({
-  handleAddClick,
-  weatherData,
-  toggleMobileMenu,
-  isMobileMenuOpen,
-}) {
+function Header({ handleAddClick, weatherData }) {
+  const [value, setValue] = useState(false);
+
+  const handleToggle = () => {
+    setValue(!value);
+  };
+
   return (
     <header className="header">
-      <nav className={`header__nav`}></nav>
       <div className="header__logo-container">
-        <img className="header__logo" src={logo} alt="Logo" />
+        <Link to="/">
+          <img className="header__logo" src={logo} alt="Logo" />
+        </Link>
         <p className="header__date">
           {currentDate}, {weatherData.city}
         </p>
       </div>
+      <ToggleSwitch isOn={value} handleToggle={handleToggle} />
       <button
         type="button"
         onClick={handleAddClick}
@@ -30,19 +35,16 @@ function Header({
       >
         + Add Clothes
       </button>
-      <div className="header__profile-container">
-        <p className="header__profile-name">Terrance Tegegne</p>
-        <img
-          className="header__profile-pic"
-          src={profileImage}
-          alt="avatar picture"
-        ></img>
-        <img
-          className="header__hamburger"
-          src={hamburgerMenu}
-          alt="avatar picture"
-        ></img>
-      </div>
+      <Link to="/profile" className="header__link">
+        <div className="header__profile-container">
+          <p className="header__profile-name">Terrance Tegegne</p>
+          <img
+            className="header__profile-pic"
+            src={profileImage}
+            alt="avatar picture"
+          ></img>
+        </div>
+      </Link>
     </header>
   );
 }
