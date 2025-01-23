@@ -56,14 +56,6 @@ function App() {
         closeActiveModal();
       })
       .catch(console.error);
-    // const newId = Math.max(...clothingItems.map((item) => item._id)) + 1;
-    // // update clothing items array
-    // setClothingItems((prevItems) => [
-    //   { name, link: image, weather, _id: newId },
-    //   ...prevItems,
-    // ]);
-    // // close modal
-    // closeActiveModal();
   };
 
   const handleDelete = () => {

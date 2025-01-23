@@ -1,5 +1,5 @@
+import "./SideBar.css";
 import profileImage from "../../assets/profile-image.svg";
-import "../SideBar/SideBar.css";
 
 function Sidebar() {
   return (
