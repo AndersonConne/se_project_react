@@ -1,4 +1,4 @@
-import "./SideBar.css";
+import "./Sidebar.css";
 import profileImage from "../../assets/profile-image.svg";
 
 function Sidebar() {
