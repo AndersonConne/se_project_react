@@ -12,11 +12,14 @@
 }
 
 .modal__title {
-  margin: 0 0 24px;
   font-family: "cabinet-grotesk";
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
+}
+
+.modal__title_type_register {
+  margin-bottom: 0;
 }
 
 .modal_open {
@@ -64,6 +67,10 @@
   margin-top: 24px;
 }
 
+.modal__label_type_register {
+  margin-top: 24px;
+}
+
 .modal__legend {
   font-family: "cabinet-grotesk";
   font-weight: 700;
@@ -83,7 +90,10 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.24;
-  padding: 8px;
+}
+
+.modal__input_type_register {
+  margin-bottom: 32px;
 }
 
 .modal__radio-buttons {

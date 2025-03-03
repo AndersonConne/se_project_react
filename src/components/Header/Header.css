@@ -52,3 +52,16 @@
   text-decoration: none;
   color: black;
 }
+
+.header__button {
+  background-color: transparent;
+  border: none;
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.header__button:hover {
+  cursor: pointer;
+}

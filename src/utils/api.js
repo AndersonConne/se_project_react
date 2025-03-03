@@ -11,20 +11,22 @@ function getItems() {
   return fetch(`${baseUrl}/items`).then(checkResponse);
 }
 
-const deleteItem = (cardId) => {
+const deleteItem = (cardId, token) => {
   return fetch(`${baseUrl}/items/${cardId}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
     },
   }).then(checkResponse);
 };
 
-function addItem(name, imageUrl, weather) {
+function addItem(name, imageUrl, weather, token) {
   return fetch(`${baseUrl}/items`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
       name,
