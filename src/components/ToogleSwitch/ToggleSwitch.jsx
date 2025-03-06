@@ -6,7 +6,6 @@ const ToggleSwitch = () => {
   const { handleToggle, currentTemperatureUnit } = useContext(
     CurrentTemperatureUnitContext
   );
-  console.log(currentTemperatureUnit);
   return (
     <div className="toggle">
       <input
@@ -32,18 +31,6 @@ const ToggleSwitch = () => {
       </label>
     </div>
   );
-  //   return (
-  //     <>
-  //       <input
-  //         className="toggle__switch"
-  //         id={`react-switch-new`}
-  //         type="checkbox"
-  //       />
-  //       <label className="toggle__label" htmlFor={`react-switch-new`}>
-  //         <span className={`toggle__button`} />
-  //       </label>
-  //     </>
-  //   );
 };
 
 export default ToggleSwitch;

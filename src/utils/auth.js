@@ -2,18 +2,13 @@ const baseUrl = "http://localhost:3001";
 
 function checkResponse(res) {
   if (res.ok) {
-    res.json();
+    return res.json();
   }
   return Promise.reject(`Error: ${res.status}`);
 }
 
-async function request(url, options) {
-  const res = await fetch(url, options);
-  return checkResponse(res);
-}
-
 function signupUser(userData) {
-  return request(`${baseUrl}/signup`, {
+  return fetch(`${baseUrl}/signup`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -24,27 +19,31 @@ function signupUser(userData) {
       email: userData.email,
       password: userData.password,
     }),
-  });
+  }).then(checkResponse);
 }
 
-function loginUser({ email, password }) {
-  return request(`${baseUrl}/signin`, {
+function loginUser(email, password) {
+  return fetch(`${baseUrl}/signin`, {
     method: "POST",
     headers: {
+      Accept: "application/json",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email, password }),
-  });
+    body: JSON.stringify({
+      email,
+      password,
+    }),
+  }).then(checkResponse);
 }
 
 function checkToken(token) {
-  return request(`${baseUrl}/users/me`, {
+  return fetch(`${baseUrl}/users/me`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
       authorization: `Bearer ${token}`,
     },
-  });
+  }).then(checkResponse);
 }
 
 export { signupUser, loginUser, checkToken };

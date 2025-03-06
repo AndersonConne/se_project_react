@@ -36,14 +36,11 @@ function RegisterModal({ onClose, isOpen, activeModal, handleRegister }) {
       isOpen={isOpen}
       onSubmit={handleSubmit}
     >
-      <label
-        htmlFor="email"
-        className="modal__label modal__label_type_register"
-      >
+      <label htmlFor="email" className="modal__label">
         Email*{" "}
         <input
           type="email"
-          className="modal__input"
+          className="modal__input modal__input_type_register"
           id="email"
           placeholder="Email"
           onChange={handleEmailChange}
@@ -58,7 +55,7 @@ function RegisterModal({ onClose, isOpen, activeModal, handleRegister }) {
         Password*{" "}
         <input
           type="text"
-          className="modal__input"
+          className="modal__input modal__input_type_register"
           id="password"
           placeholder="Password"
           required
@@ -70,7 +67,7 @@ function RegisterModal({ onClose, isOpen, activeModal, handleRegister }) {
         Name *{" "}
         <input
           type="text"
-          className="modal__input"
+          className="modal__input modal__input_type_register"
           id="name"
           placeholder="Name"
           required
@@ -80,7 +77,7 @@ function RegisterModal({ onClose, isOpen, activeModal, handleRegister }) {
       </label>
       <label
         htmlFor="avatar"
-        className="modal__label modal__label_type_register"
+        className="modal__label modal__input_type_register modal__label_type_bottom-gap"
       >
         Avatar URL *{" "}
         <input

@@ -10,9 +10,34 @@
   background-color: rgba(233, 233, 233, 1);
 }
 
-.card__name {
+.card__container {
   position: absolute;
   top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.card__like {
+  background: transparent url("../../assets/like.svg") center no-repeat;
+  border: none;
+  width: 20px;
+  height: 18px;
+  margin-left: 10px;
+}
+
+.card__like:hover {
+  cursor: pointer;
+}
+
+.card__like_active {
+  background: transparent url("../../assets/liked.svg") center no-repeat;
+  border: none;
+  width: 20px;
+  height: 18px;
+  margin-left: 10px;
+}
+
+.card__name {
   display: flex;
   align-items: center;
   margin: 0;

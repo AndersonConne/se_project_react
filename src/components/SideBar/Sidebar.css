@@ -1,5 +1,10 @@
 .sidebar {
   display: flex;
+  flex-direction: column;
+}
+
+.sidebar__container {
+  display: flex;
   flex-direction: row;
   gap: 16px;
   align-items: center;
@@ -18,4 +23,23 @@
   font-size: 20px;
   line-height: 1.24;
   width: 157px;
+}
+
+.sidebar__button {
+  margin: 24px 0 0 0;
+  border: none;
+  text-align: left;
+  font-family: "cabinet-grotesk";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.24;
+  padding: 0;
+}
+
+.sidebar__button:hover {
+  cursor: pointer;
+}
+
+.sidebar__button:last-of-type {
+  margin: 8px 0 0 0;
 }

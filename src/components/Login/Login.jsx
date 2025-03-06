@@ -15,7 +15,7 @@ function Login({ onClose, activeModal, isOpen, handleLogin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleLogin({ email, password });
+    handleLogin(email, password);
   };
   return (
     <ModalWithForm

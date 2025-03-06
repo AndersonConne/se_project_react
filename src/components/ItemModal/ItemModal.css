@@ -9,7 +9,7 @@
 }
 
 .modal__footer {
-  margin: 20px 0 12px 0;
+  margin: 20px 32px 12px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,7 @@
 }
 
 .modal__weather {
-  margin: 0;
+  margin: 32px;
   font-family: "cabinet-grotesk";
   font-weight: 700;
   font-size: 20px;

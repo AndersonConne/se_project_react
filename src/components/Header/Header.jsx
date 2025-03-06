@@ -24,7 +24,7 @@ function Header({
     setValue(!value);
   };
 
-  const { userData } = useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
 
   return (
     <header className="header">
@@ -48,11 +48,11 @@ function Header({
           </button>
           <Link to="/profile" className="header__link">
             <div className="header__profile-container">
-              <p className="header__profile-name">{userData.name}</p>
+              <p className="header__profile-name">{currentUser?.name}</p>
               <img
                 className="header__profile-pic"
-                src={userData.avatar}
-                alt={userData.avatar}
+                src={currentUser?.avatar}
+                alt={currentUser?.avatar}
               ></img>
             </div>
           </Link>
