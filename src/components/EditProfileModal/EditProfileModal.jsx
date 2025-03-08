@@ -44,7 +44,7 @@ function EditProfileModal({ activeModal, onClose, isOpen, handleEditProfile }) {
         <input
           type="text"
           className="modal__input"
-          id="name"
+          id="edit-name"
           placeholder="Name"
           onChange={handleNameChange}
           value={name}
@@ -56,7 +56,7 @@ function EditProfileModal({ activeModal, onClose, isOpen, handleEditProfile }) {
         <input
           type="url"
           className="modal__input"
-          id="avatar"
+          id="edit-avatar"
           placeholder="Avatar"
           onChange={handleAvatarChange}
           value={avatar}

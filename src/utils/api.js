@@ -1,6 +1,6 @@
 const baseUrl = "http://localhost:3001";
 
-function checkResponse(res) {
+export default function checkResponse(res) {
   if (res.ok) {
     return res.json();
   }

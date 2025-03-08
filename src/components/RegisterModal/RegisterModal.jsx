@@ -49,7 +49,8 @@ function RegisterModal({
         <input
           type="email"
           className="modal__input modal__input_type_register"
-          id="email"
+          id="register-email"
+          name="email"
           placeholder="Email"
           onChange={handleEmailChange}
           value={email}
@@ -59,10 +60,11 @@ function RegisterModal({
       <label className="modal__label modal__label_type_register">
         Password*{" "}
         <input
-          type="text"
+          type="password"
           className="modal__input modal__input_type_register"
-          id="password"
+          id="register-password"
           placeholder="Password"
+          name="password"
           required
           onChange={handlePasswordChange}
           value={password}
@@ -73,8 +75,9 @@ function RegisterModal({
         <input
           type="text"
           className="modal__input modal__input_type_register"
-          id="name"
+          id="register-name"
           placeholder="Name"
+          name="name"
           required
           onChange={handleNameChange}
           value={name}
@@ -85,8 +88,9 @@ function RegisterModal({
         <input
           type="url"
           className="modal__input modal__input_type_register"
-          id="avatar"
+          id="register-avatar"
           placeholder="Avatar URL"
+          name="avatar"
           required
           onChange={handleAvatarUrlChange}
           value={avatar}

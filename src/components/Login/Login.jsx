@@ -33,8 +33,9 @@ function Login({ onClose, activeModal, isOpen, handleLogin, onButtonClick }) {
         <input
           type="email"
           className="modal__input"
-          id="email"
+          id="login-email"
           placeholder="Email"
+          name="email"
           onChange={handleEmailChange}
           value={email}
           required
@@ -43,10 +44,11 @@ function Login({ onClose, activeModal, isOpen, handleLogin, onButtonClick }) {
       <label className="modal__label modal__label_type_register">
         Password*{" "}
         <input
-          type="text"
+          type="password"
           className="modal__input  modal__input_type_register"
-          id="password"
+          id="login-password"
           placeholder="Password"
+          name="password"
           required
           onChange={handlePasswordChange}
           value={password}
