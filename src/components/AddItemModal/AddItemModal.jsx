@@ -45,6 +45,7 @@ function AddItemModal({
       isOpen={isOpen}
       activeModal={activeModal}
       onSubmit={handleSubmit}
+      redirectButtonText=""
     >
       <label htmlFor="name" className="modal__label">
         Name{" "}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function Login({ onClose, activeModal, isOpen, handleLogin }) {
+function Login({ onClose, activeModal, isOpen, handleLogin, onButtonClick }) {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
 
@@ -25,11 +25,10 @@ function Login({ onClose, activeModal, isOpen, handleLogin }) {
       onClose={onClose}
       isOpen={isOpen}
       onSubmit={handleSubmit}
+      redirectButtonText="or Sign up"
+      onButtonClick={onButtonClick}
     >
-      <label
-        htmlFor="email"
-        className="modal__label modal__label_type_register"
-      >
+      <label className="modal__label modal__label_type_register">
         Email*{" "}
         <input
           type="email"
@@ -41,10 +40,7 @@ function Login({ onClose, activeModal, isOpen, handleLogin }) {
           required
         />
       </label>
-      <label
-        htmlFor="password"
-        className="modal__label modal__label_type_register"
-      >
+      <label className="modal__label modal__label_type_register">
         Password*{" "}
         <input
           type="text"

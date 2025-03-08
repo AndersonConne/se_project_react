@@ -5,16 +5,17 @@ import { useState, useEffect } from "react";
 
 function EditProfileModal({ activeModal, onClose, isOpen, handleEditProfile }) {
   const currentUser = useContext(CurrentUserContext);
-
-  const [name, setName] = useState();
-  const [avatar, setAvatar] = useState();
+  const username = currentUser?.name;
+  const avatarUrl = currentUser?.avatar;
+  const [name, setName] = useState("");
+  const [avatar, setAvatar] = useState("");
 
   useEffect(() => {
-    if (name && avatar) {
+    if (username && avatarUrl) {
       setName(currentUser.name);
       setAvatar(currentUser.avatar);
     }
-  }, []);
+  }, [onClose]);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -38,7 +39,7 @@ function EditProfileModal({ activeModal, onClose, isOpen, handleEditProfile }) {
       isOpen={isOpen}
       onSubmit={handleSubmit}
     >
-      <label htmlFor="name" className="modal__label">
+      <label className="modal__label">
         Name *{" "}
         <input
           type="text"
@@ -50,13 +51,13 @@ function EditProfileModal({ activeModal, onClose, isOpen, handleEditProfile }) {
           required
         />
       </label>
-      <label htmlFor="email" className="modal__label">
+      <label className="modal__label">
         Avatar *{" "}
         <input
           type="url"
           className="modal__input"
-          id="email"
-          placeholder="Email"
+          id="avatar"
+          placeholder="Avatar"
           onChange={handleAvatarChange}
           value={avatar}
           required

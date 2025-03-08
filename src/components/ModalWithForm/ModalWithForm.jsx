@@ -8,7 +8,14 @@ function ModalWithForm({
   onClose,
   isOpen,
   onSubmit,
+  redirectButtonText,
+  onButtonClick,
 }) {
+  const redirectButtonTextClassName = `modal__redirect-button ${
+    redirectButtonText && redirectButtonText.length > 0
+      ? "modal__redirect-button_visible"
+      : "modal__redirect-button_hidden"
+  }`;
   return (
     <div className={`modal ${activeModal === isOpen && "modal_open"}`}>
       <div className="modal__content">
@@ -16,9 +23,17 @@ function ModalWithForm({
         <button type="button" onClick={onClose} className="modal__close" />
         <form onSubmit={onSubmit} className="modal__form">
           {children}
-          <button className="modal__submit" type="submit">
-            {buttonText}
-          </button>
+          <div>
+            <button className="modal__submit" type="submit">
+              {buttonText}
+            </button>
+            <button
+              className={redirectButtonTextClassName}
+              onClick={onButtonClick}
+            >
+              {redirectButtonText}
+            </button>
+          </div>
         </form>
       </div>
     </div>

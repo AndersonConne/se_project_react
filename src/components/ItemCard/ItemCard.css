@@ -56,6 +56,10 @@
   width: 100%;
 }
 
+.card__image:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 630px) {
   .card {
     width: 164px;

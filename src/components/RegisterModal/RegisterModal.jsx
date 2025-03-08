@@ -1,6 +1,12 @@
 import { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
-function RegisterModal({ onClose, isOpen, activeModal, handleRegister }) {
+function RegisterModal({
+  onClose,
+  isOpen,
+  activeModal,
+  handleRegister,
+  onButtonClick,
+}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -35,8 +41,10 @@ function RegisterModal({ onClose, isOpen, activeModal, handleRegister }) {
       onClose={onClose}
       isOpen={isOpen}
       onSubmit={handleSubmit}
+      redirectButtonText="or Log in"
+      onButtonClick={onButtonClick}
     >
-      <label htmlFor="email" className="modal__label">
+      <label className="modal__label">
         Email*{" "}
         <input
           type="email"
@@ -48,10 +56,7 @@ function RegisterModal({ onClose, isOpen, activeModal, handleRegister }) {
           required
         />
       </label>
-      <label
-        htmlFor="password"
-        className="modal__label modal__label_type_register"
-      >
+      <label className="modal__label modal__label_type_register">
         Password*{" "}
         <input
           type="text"
@@ -63,7 +68,7 @@ function RegisterModal({ onClose, isOpen, activeModal, handleRegister }) {
           value={password}
         />
       </label>
-      <label htmlFor="name" className="modal__label modal__label_type_register">
+      <label className="modal__label modal__label_type_register">
         Name *{" "}
         <input
           type="text"
@@ -75,10 +80,7 @@ function RegisterModal({ onClose, isOpen, activeModal, handleRegister }) {
           value={name}
         />
       </label>
-      <label
-        htmlFor="avatar"
-        className="modal__label modal__input_type_register modal__label_type_bottom-gap"
-      >
+      <label className="modal__label modal__input_type_register modal__label_type_bottom-gap">
         Avatar URL *{" "}
         <input
           type="url"

@@ -9,6 +9,7 @@ function Profile({
   handleEditProfileClick,
   handleSignOut,
   selectedCard,
+  onCardLike,
 }) {
   const myClothes = clothingItems.filter((item) => item._id);
   return (
@@ -25,6 +26,7 @@ function Profile({
           handleButtonClick={handleButtonClick}
           clothingItems={myClothes}
           selectedCard={selectedCard}
+          onCardLike={onCardLike}
         />
       </section>
     </div>

@@ -38,7 +38,7 @@ function App() {
     city: "",
   });
   const [clothingItems, setClothingItems] = useState([]);
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
@@ -85,9 +85,9 @@ function App() {
         console.log(res);
         setUserData(res);
         setIsLoggedIn(true);
+        closeActiveModal();
       })
       .catch((err) => console.error(err));
-    closeActiveModal();
   }
 
   const handleRegister = (values) => {
@@ -106,6 +106,7 @@ function App() {
     const token = localStorage.getItem("jwt");
     addItem(name, imageUrl, weather, token)
       .then((item) => {
+        console.log(item);
         setClothingItems([item, ...clothingItems]);
         closeActiveModal();
       })
@@ -223,13 +224,13 @@ function App() {
                 element={
                   <ProtectedRoute isLoggedIn={isLoggedIn}>
                     <Profile
-                      userData={userData}
                       onCardClick={handleCardClick}
                       handleButtonClick={handleAddClick}
                       clothingItems={clothingItems}
                       isLoggedIn={setIsLoggedIn}
                       handleEditProfileClick={handleEditProfileClick}
                       handleSignOut={handleSignOut}
+                      onCardLike={handleCardLike}
                       selectedCard={selectedCard}
                     />
                   </ProtectedRoute>
@@ -258,12 +259,20 @@ function App() {
             isOpen={"register"}
             activeModal={activeModal}
             handleRegister={handleRegister}
+            onButtonClick={() => {
+              closeActiveModal();
+              setActiveModal("login");
+            }}
           />
           <Login
             onClose={closeActiveModal}
             isOpen={"login"}
             activeModal={activeModal}
             handleLogin={handleLogin}
+            onButtonClick={() => {
+              closeActiveModal();
+              setActiveModal("register");
+            }}
           />
 
           <EditProfileModal
