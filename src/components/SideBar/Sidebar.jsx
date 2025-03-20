@@ -1,16 +1,18 @@
 import "./Sidebar.css";
-import profileImage from "../../assets/profile-image.svg";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import { useContext } from "react";
 
 function Sidebar({ handleEditProfileClick, handleSignOut }) {
+  const currentUser = useContext(CurrentUserContext);
   return (
     <div className="sidebar">
       <div className="sidebar__container">
         <img
-          src={profileImage}
+          src={currentUser?.avatar}
           alt="Profile Image"
           className="sidebar__avatar"
         />
-        <p className="sidebar__name">Terrence Tegegne</p>
+        <p className="sidebar__name">{currentUser?.name}</p>
       </div>
       <button className="sidebar__button" onClick={handleEditProfileClick}>
         Change profile data
